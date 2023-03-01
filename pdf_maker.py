@@ -29,7 +29,7 @@ for file_name in os.listdir(folder_path):
         with open(os.path.join(folder_path, file_name), "r") as f:
             python_code = f.read()
         # Define the input and output image names
-        input_image_name = "input.pgm"
+        input_image_name = "input1.pgm"
         output_image_name = file_name.replace(".py", "_output.pgm")
         # Run the Python code with the input and output image names
         subprocess.call(["python3", os.path.join(
@@ -43,7 +43,7 @@ for file_name in os.listdir(folder_path):
         \end{verbatim}
         """
         # Generate input and output image filenames
-        input_image_filename = "input.png"
+        input_image_filename = "input1.jpg"
         output_image_filename = file_name.replace(
             file_extension, "") + "_output.png"
         # Add the input and output images to the LaTeX document
@@ -78,16 +78,7 @@ with open("output.tex", "w") as f:
     f.write(document)
 
 
-input_dir = "output"
-output_dir = "output"
 
-for filename in os.listdir(input_dir):
-    if filename.endswith(".pgm"):
-        input_path = os.path.join(input_dir, filename)
-        output_path = os.path.join(
-            output_dir, os.path.splitext(filename)[0] + ".png")
-        img = cv2.imread(input_path)
-        cv2.imwrite(output_path, img)
 
 # Compile the LaTeX document to generate the PDF output file
 #os.system("pdflatex -output-directory=" + "output.tex")
