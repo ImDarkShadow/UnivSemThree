@@ -10,9 +10,9 @@ with open(input_file, 'r') as f:
 
 # Extract the image dimensions and pixel values
 assert lines[0].startswith('P2')
-width, height = map(int, lines[1].split())
-max_value = int(lines[2])
-pixels = [list(map(int, line.split())) for line in lines[3:]]
+width, height = map(int, lines[2].split())
+max_value = int(lines[3])
+pixels = [list(map(int, line.split())) for line in lines[4:]]
 
 # Define the size of the neighborhood window (m x n)
 m = 3  # number of rows in the neighborhood window

@@ -2,12 +2,14 @@ from PIL import Image
 from PIL import ImageDraw
 
 # Open image and get pixel values
-img = Image.open('input_image.png')
+img = Image.open('input1.jpg')
+img = img.convert('L')
 pixels = list(img.getdata())
 
 # Create histogram
 histogram = [0] * 256
 for pixel in pixels:
+    print(pixel)
     histogram[pixel] += 1
 
 # Normalize histogram values to [0, 255]

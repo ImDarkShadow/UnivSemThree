@@ -1,12 +1,8 @@
 import sys
 
 # Parse command-line arguments
-if len(sys.argv) != 3:
-    print("Usage: python connected_components.py <input_file> <output_file>")
-    sys.exit()
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = "input1.pgm"
 
 # Read the input image file line by line
 with open(input_file, 'r') as f:
@@ -14,8 +10,8 @@ with open(input_file, 'r') as f:
 
 # Extract the image dimensions and pixel values
 assert lines[0].startswith('P2')
-width, height = map(int, lines[1].split())
-max_value = int(lines[2])
+width, height = map(int, lines[2].split())
+max_value = int(lines[3])
 pixels = [[int(val >= 128) for val in line.split()] for line in lines[3:]]
 
 # Define a list to keep track of the visited pixels
@@ -40,6 +36,5 @@ for y in range(height):
             dfs(x, y)
 
 # Write the counter value to the output file
-with open(output_file, 'w') as f:
-    f.write(str(counter))
+print(counter)
 

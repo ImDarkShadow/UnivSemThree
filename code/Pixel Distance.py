@@ -2,13 +2,14 @@ import sys
 from math import sqrt
 
 # Parse command-line arguments
-if len(sys.argv) != 6:
+print(sys.argv)
+if len(sys.argv) != 7:
     print("Usage: python distances.py <input_file> <output_file> <x1> <y1> <x2> <y2>")
     sys.exit()
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
-x1, y1, x2, y2 = map(int, sys.argv[3:])
+x1, y1, x2, y2 = int(sys.argv[3]),int(sys.argv[4]),int(sys.argv[5]),int(sys.argv[6])
 
 # Read the input image file line by line
 with open(input_file, 'r') as f:
@@ -16,9 +17,9 @@ with open(input_file, 'r') as f:
 
 # Extract the image dimensions and pixel values
 assert lines[0].startswith('P2')
-width, height = map(int, lines[1].split())
-max_value = int(lines[2])
-pixels = [[int(val) for val in line.split()] for line in lines[3:]]
+width, height = map(int, lines[2].split())
+max_value = int(lines[3])
+pixels = [[int(val) for val in line.split()] for line in lines[4:]]
 
 # Compute the Euclidean distance between the two pixels
 euclidean_distance = sqrt((x1 - x2)**2 + (y1 - y2)**2)

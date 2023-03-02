@@ -1,0 +1,4 @@
+Euclidean distance: 87.98
+D4 distance: 121
+D8 distance: 75
+Dm distance: 75

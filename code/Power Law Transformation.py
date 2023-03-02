@@ -5,7 +5,7 @@ from math import pow
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 gamma = 2
-C = 5
+C = 1.3
 
 with open(input_file, 'r') as picture:
     element = picture.readlines()

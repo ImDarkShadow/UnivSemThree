@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Histogram Find}{3}{}%
+\contentsline {section}{\numberline {2}Histogram Equalization}{4}{}%
+\contentsline {section}{\numberline {3}Log Transformation}{5}{}%
+\contentsline {section}{\numberline {4}Power Law Transformation}{6}{}%
+\contentsline {section}{\numberline {5}Pixel Distance}{7}{}%
+\contentsline {section}{\numberline {6}Min Filter}{8}{}%
+\contentsline {section}{\numberline {7}Constrst Streaching}{9}{}%
+\contentsline {section}{\numberline {8}Negative Transformation}{10}{}%
+\contentsline {section}{\numberline {9}Max Filter}{11}{}%
+\contentsline {section}{\numberline {10}Average Filter}{12}{}%
+\contentsline {section}{\numberline {11}Image Scaling}{13}{}%

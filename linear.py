@@ -2,7 +2,7 @@ from PIL import Image
 import random
 
 # Load image
-im = Image.open("input1.pgm")
+im = Image.open("input1.jpg")
 
 # Add 20 to each pixel and clip values over 255
 sum_im = im.copy()
@@ -12,7 +12,7 @@ for i in range(width):
         sum_im.putpixel((i,j), im.getpixel((i,j)) + 20)
         if sum_im.getpixel((i,j)) > 255:
             sum_im.putpixel((i,j), 255)
-sum_im.save("SumImage.pgm")
+sum_im.save("SumImage.png")
 
 # Create two random images and select the maximum pixel-wise
 max_im = Image.new("L", im.size)
@@ -34,5 +34,5 @@ for i in range(width):
             max_im.putpixel((i,j), f1_im.getpixel((i,j)))
         else:
             max_im.putpixel((i,j), f2_im.getpixel((i,j)))
-max_im.save("MaxImage.pgm")
+max_im.save("MaxImage.png")
 

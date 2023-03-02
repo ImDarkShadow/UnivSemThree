@@ -10,9 +10,9 @@ with open(input_file, 'r') as f:
 
 # Extract the image dimensions and pixel values
 assert lines[0].startswith('P2')
-width, height = map(int, lines[1].split())
-max_value = int(lines[2])
-pixels = [list(map(int, line.split())) for line in lines[3:]]
+width, height = map(int, lines[2].split())
+max_value = int(lines[3])
+pixels = [list(map(int, line.split())) for line in lines[4:]]
 
 # Compute the minimum pixel value in the image
 min_value = min(min(row) for row in pixels)

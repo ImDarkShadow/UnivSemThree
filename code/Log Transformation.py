@@ -1,5 +1,6 @@
 from math import log10
 import sys
+import numpy as np
 
 
 input_file = sys.argv[1]

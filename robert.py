@@ -1,7 +1,7 @@
 from PIL import Image
 
 # Load the input image
-input_image = Image.open("input1.pgm")
+input_image = Image.open("input1.jpg")
 
 # Apply Sobel operator for image sharpening
 def sobel_operator(pixel):
